@@ -30,7 +30,7 @@ const Navbar = () => {
           <div data-aos="fade-down" data-aos-once="true">
             <a
               href="#"
-              className="text-2xl sm:text-3xl flex justify-center items-center gap-2 tracking-wider font ml-4"
+              className="text-2xl sm:text-3xl flex justify-center items-center gap-2 tracking-wider font ml-4 font-bold"
             >
               PROTFOLIO
             </a>
