@@ -1,52 +1,103 @@
 import React from 'react';
-import { assets } from '../assets/assets';
 
 const About = () => {
   return (
-    <>
-      <div className="min-h-[550px] sm:min-h-[600px] bg-brandDark flex justify-center items-center text-white">
-        <div className="container pb-8 sm:pb-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2">
-            {/* Image Section */}
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="300"
-              className="min-h-[450px] flex justify-center items-center relative order-1 sm:order-2"
-            >
-              <img
-                data-aos-once="true"
-                src={assets.profile_img}
-                alt="profile_img"
-                className="w-[200px] sm:w-[400px] sm:scale-100 mx-auto rounded-full hover:scale-110 duration-200"
-              />
-            </div>
-            {/* Text Section */}
-            <div className="flex flex-col justify-center gap-6 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1">
-              <h1
-                data-aos="fade-up"
-                data-aos-once="true"
-                className="text-2xl sm:text-3xl lg:text-3xl font-cursive"
-              >
-                Welcome to My Profile.<br /> I'm{" "}
-                <span
-                  data-aos="zoom-out"
-                  data-aos-delay="300"
-                  className="bg-clip-text text-transparent bg-gradient-to-b from-light to-light/90 font-sans font-bold"
-                >
-                  Bhathiya Lakshan,
-                </span>{" "}
-                a software engineer passionate about creating impactful solutions.
-              </h1>
-              <div data-aos="fade-up" data-aos-delay="400">
-                <button className="bg-gradient-to-r from-primary to-primary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
-                  About Me
-                </button>
-              </div>
-            </div>
+    <section id="about" className="min-h-screen bg-gray-900 text-white flex justify-center items-center py-12">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-8">About Me</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Description */}
+          <div className="flex flex-col justify-center">
+            <p className="text-lg leading-relaxed mb-4">
+              Hi, I'm Bhathiya Lakshan, a passionate software engineer with a strong interest in creating impactful solutions.
+              I have a background in computing and software engineering and am currently pursuing a top-up degree.
+            </p>
+            <p className="text-lg leading-relaxed mb-4">
+              I have developed various projects including Drive Mate, a comprehensive desktop software solution for driving schools in Sri Lanka, and Cineplex, a movie theater management system.
+              My skills include Java, Python, .NET Framework, Node.js, React, and Tailwind CSS.
+            </p>
+          </div>
+          
+          {/* Details */}
+          <div className="flex flex-col justify-center">
+            <h3 className="text-2xl font-bold mb-4">Details</h3>
+            <ul className="text-lg leading-relaxed">
+              <li><strong>Name:</strong> Bhathiya Lakshan</li>
+              <li><strong>Education:</strong> Higher Diploma in Computing and Software Engineering</li>
+              <li><strong>Current Study:</strong> Top-up Degree</li>
+              <li><strong>Location:</strong> Sri Lanka</li>
+              <li><strong>Email:</strong> your-email@example.com</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </>
+        
+        {/* Skills */}
+        <div className="mt-12">
+            <h3 className="text-2xl font-bold mb-4 text-center">Skills</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="flex flex-col items-center">
+                <span className="text-3xl"><img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Java-Light.svg" alt="Java" width="40" height="40"/></span>
+                <span>Java</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl"><img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Python-Light.svg" alt="Python" width="40" height="40"/>
+                </span>
+                <span>Python</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl"><img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/DotNet.svg" alt="DotNet" width="40" height="40"/></span>
+                <span>.NET Framework</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🟢</span>
+                <span>Node.js</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">⚛️</span>
+                <span>React</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🎨</span>
+                <span>Tailwind CSS</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🌀</span> {/* Consider using a different icon for C */}
+                <span>C</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🔵</span> {/* Consider using a different icon for C# */}
+                <span>C#</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">💻</span> {/* Use an icon representing JavaScript */}
+                <span>JavaScript</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🗄️</span> {/* Use an icon representing MySQL */}
+                <span>MySQL</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">📊</span> {/* Use an icon representing MongoDB */}
+                <span>MongoDB</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🌐</span> {/* Use an icon representing HTML */}
+                <span>HTML</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🎨</span> {/* Use an icon representing CSS */}
+                <span>CSS</span>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-3xl">🔘</span> {/* Use an icon representing Bootstrap */}
+                <span>Bootstrap</span>
+            </div>
+            </div>
+        
+        </div>
+        </div>
+    </section>
   );
 }
 
