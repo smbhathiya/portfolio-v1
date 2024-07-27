@@ -43,9 +43,9 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-center"
           >
-            <div className="bg-brandDark p-4 rounded-lg">
+            <div className="bg-brandDark p-4 rounded-lg hover:scale-105 duration-200">
               <h3 className="text-2xl font-semibold mb-4">About Me</h3>
-              <p className="text-lg leading-relaxed mb-4 text-left  p-5 rounded-lg hover:bg-box hover:cursor-pointer hover:scale-105 duration-200">
+              <p className="text-lg leading-relaxed mb-4 text-left  p-5 rounded-lg hover:bg-box hover:cursor-pointer ">
                 <strong>Hi, I'm {data.name},</strong>
                 <br /> I completed my {data.education} at ICBT Campus, offered
                 by Cardiff Metropolitan University, and am currently pursuing a
@@ -66,7 +66,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-top"
           >
-            <div className="bg-brandDark p-4 rounded-lg">
+            <div className="bg-brandDark p-4 rounded-lg hover:scale-105 duration-200">
               <h3 className="text-2xl font-semibold mb-4">Details</h3>
               <ul className="text-lg leading-relaxed">
                 <li className=" p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">

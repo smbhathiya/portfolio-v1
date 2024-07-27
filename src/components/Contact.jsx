@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="flex flex-col ">
             <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
             <ul className="text-lg leading-relaxed">
-              <li className="mb-4 flex items-center bg-box p-3 rounded-lg hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+              <li className="mb-4 flex items-center bg-lime-800 p-3 rounded-lg hover:bg-lime-600 hover:cursor-pointer hover:scale-105 duration-200">
                 <MdEmail className="mr-3 text-xl" />
                 <a href={`mailto:${contactData.email}`} className="">
                   {contactData.email}
