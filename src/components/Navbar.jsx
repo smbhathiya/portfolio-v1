@@ -5,7 +5,7 @@ const Menu = [
   {
     id: 1,
     name: "Home",
-    link: "/#",
+    link: "/",
   },
   {
     id: 2,
@@ -14,8 +14,18 @@ const Menu = [
   },
   {
     id: 3,
+    name: "Skills",
+    link: "/#skills",
+  },
+  {
+    id: 4,
     name: "Projects",
     link: "/#projects",
+  },
+  {
+    id: 4,
+    name: "Contact",
+    link: "/#contact",
   },
 ];
 
@@ -29,10 +39,10 @@ const Navbar = () => {
           {/* Logo section */}
           <div data-aos="fade-down" data-aos-once="true">
             <a
-              href="#"
-              className="text-2xl sm:text-3xl flex justify-center items-center gap-2 tracking-wider font ml-4 font-bold"
+              href="/"
+              className="text-2xl sm:text-3xl flex justify-center items-center gap-2 tracking-wider font ml-4 p-4 font-bold"
             >
-              PROTFOLIO
+              MY PROTFOLIO
             </a>
           </div>
 

@@ -13,6 +13,7 @@ export default {
         primary: "#2c438a",
         secondary: "#22356e",
         light: "#426ff5",
+        box: "#1f2f5e",
         brandDark: "#0b0e17",
         
       },
