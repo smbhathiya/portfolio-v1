@@ -1,7 +1,11 @@
-import React from 'react';
-import { assets } from '../assets/assets';
+import React from "react";
+import { assets } from "../assets/assets";
 
-const About = () => {
+const Home = () => {
+  const handleClick = () => {
+    window.location.href = "/#about";
+  };
+
   return (
     <>
       <div className="min-h-[550px] sm:min-h-[600px] bg-brandDark flex justify-center items-center text-white">
@@ -27,16 +31,19 @@ const About = () => {
                 data-aos-once="true"
                 className="text-2xl sm:text-3xl lg:text-3xl font-cursive"
               >
-                Welcome to My Profile.<br /> I'm{" "}
-                <span
-                  className="bg-clip-text text-transparent bg-gradient-to-b from-light to-light/90 font-sans font-bold"
-                >
+                Welcome to My Profile.
+                <br /> I'm{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-light to-light/90 font-sans font-bold ">
                   Bhathiya Lakshan,
                 </span>{" "}
-                a software engineer passionate about creating impactful solutions.
+                a software engineer passionate about creating impactful
+                solutions.
               </h1>
               <div data-aos="fade-up" data-aos-delay="100">
-                <button className="bg-gradient-to-r from-primary to-primary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
+                <button
+                  className="bg-gradient-to-r from-primary to-primary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                  onClick={handleClick}
+                >
                   About Me
                 </button>
               </div>
@@ -46,6 +53,6 @@ const About = () => {
       </div>
     </>
   );
-}
+};
 
-export default About;
+export default Home;

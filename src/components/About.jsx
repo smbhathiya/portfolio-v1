@@ -1,104 +1,96 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// Define data at the top
+const data = {
+  name: "S.M. Bhathiya Lakshan",
+  background:
+    "a passionate software engineer with a strong interest in creating impactful solutions.",
+  education: "Higher Diploma in Computing and Software Engineering",
+  currentStudy: "Top-up Degree in Software Engineering",
+  country: "Sri Lanka",
+  city: "Kuliyapitiya",
+  address: "91/2, Kurumbahenpitiyawaththa, Anukkane",
+};
 
 const About = () => {
+  const { ref: descriptionRef, inView: descriptionInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: detailsRef, inView: detailsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section id="about" className="min-h-screen bg-gray-900 text-white flex justify-center items-center py-12">
+    <section id="about" className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">About Me</h2>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Description */}
-          <div className="flex flex-col justify-center">
-            <p className="text-lg leading-relaxed mb-4">
-              Hi, I'm Bhathiya Lakshan, a passionate software engineer with a strong interest in creating impactful solutions.
-              I have a background in computing and software engineering and am currently pursuing a top-up degree.
+          <motion.div
+            ref={descriptionRef}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{
+              opacity: descriptionInView ? 1 : 0,
+              y: descriptionInView ? 0 : 50,
+            }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col justify-center"
+          >
+            <p className="text-lg leading-relaxed mb-4 text-left bg-box p-5 rounded-lg hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+              <strong>Hi, I'm {data.name},</strong>
+              <br /> I completed my {data.education} at ICBT Campus, offered by
+              Cardiff Metropolitan University, and am currently pursuing a
+              Top-up Degree in Software Engineering. <br />
+              <br /> I am an enthusiastic, self-motivated, responsible, and
+              hardworking individual. I adapt to challenging situations and work
+              effectively both independently and as part of a team. My
+              experience as a team leader on campus has honed my leadership and
+              collaborative skills. I am capable of working under pressure and
+              meeting deadlines, and I approach tasks with an active and dynamic
+              mindset to ensure successful completion.
             </p>
-            <p className="text-lg leading-relaxed mb-4">
-              I have developed various projects including Drive Mate, a comprehensive desktop software solution for driving schools in Sri Lanka, and Cineplex, a movie theater management system.
-              My skills include Java, Python, .NET Framework, Node.js, React, and Tailwind CSS.
-            </p>
-          </div>
-          
+          </motion.div>
           {/* Details */}
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-bold mb-4">Details</h3>
+          <motion.div
+            ref={detailsRef}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{
+              opacity: detailsInView ? 1 : 0,
+              y: detailsInView ? 0 : 50,
+            }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col justify-center"
+          >
             <ul className="text-lg leading-relaxed">
-              <li><strong>Name:</strong> Bhathiya Lakshan</li>
-              <li><strong>Education:</strong> Higher Diploma in Computing and Software Engineering</li>
-              <li><strong>Current Study:</strong> Top-up Degree</li>
-              <li><strong>Location:</strong> Sri Lanka</li>
-              <li><strong>Email:</strong> your-email@example.com</li>
+              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                <strong>Name:</strong> {data.name}
+              </li>
+              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                <strong>Education:</strong> {data.education}
+              </li>
+              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                <strong>Current Study:</strong> {data.currentStudy}
+              </li>
+              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                <strong>Country:</strong> {data.country}
+              </li>
+              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                <strong>City:</strong> {data.city}
+              </li>
+              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                <strong>Address:</strong> {data.address}
+              </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
-        
-        {/* Skills */}
-        <div className="mt-12">
-            <h3 className="text-2xl font-bold mb-4 text-center">Skills</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="flex flex-col items-center">
-                <span className="text-3xl"><img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Java-Light.svg" alt="Java" width="40" height="40"/></span>
-                <span>Java</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl"><img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Python-Light.svg" alt="Python" width="40" height="40"/>
-                </span>
-                <span>Python</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl"><img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/DotNet.svg" alt="DotNet" width="40" height="40"/></span>
-                <span>.NET Framework</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🟢</span>
-                <span>Node.js</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">⚛️</span>
-                <span>React</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🎨</span>
-                <span>Tailwind CSS</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🌀</span> {/* Consider using a different icon for C */}
-                <span>C</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🔵</span> {/* Consider using a different icon for C# */}
-                <span>C#</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">💻</span> {/* Use an icon representing JavaScript */}
-                <span>JavaScript</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🗄️</span> {/* Use an icon representing MySQL */}
-                <span>MySQL</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">📊</span> {/* Use an icon representing MongoDB */}
-                <span>MongoDB</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🌐</span> {/* Use an icon representing HTML */}
-                <span>HTML</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🎨</span> {/* Use an icon representing CSS */}
-                <span>CSS</span>
-                </div>
-                <div className="flex flex-col items-center">
-                <span className="text-3xl">🔘</span> {/* Use an icon representing Bootstrap */}
-                <span>Bootstrap</span>
-            </div>
-            </div>
-        
-        </div>
-        </div>
+      </div>
     </section>
   );
-}
+};
 
 export default About;
