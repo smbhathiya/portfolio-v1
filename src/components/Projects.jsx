@@ -6,25 +6,49 @@ import { useInView } from "react-intersection-observer";
 const projects = [
   {
     id: 1,
-    title: "Project One",
-    description: "A brief description of Project One.",
-    technologies: ["React", "Tailwind CSS"],
-    github: "https://github.com/yourusername/project-one",
-    liveDemo: "https://yourwebsite.com/project-one",
-    image: "https://via.placeholder.com/150",
-    date: "July 2024",
+    title: "Debra Event Management System",
+    description:
+      "Debra is a service-oriented project developed using ASP.NET. It encompasses both a website and a Windows desktop application. The project aims to provide seamless integration between these platforms to deliver efficient service solutions.",
+    technologies: ["ASP.NET", "C#", "Bootstrap", "CSS", "Visual Studio"],
+    github: "https://github.com/smbhathiya/DebraEventmanagement.git",
+    date: "June 2024",
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "A brief description of Project Two.",
-    technologies: ["Node.js", "Express"],
-    github: "https://github.com/yourusername/project-two",
-    liveDemo: "https://yourwebsite.com/project-two",
-    image: "https://via.placeholder.com/150",
-    date: "June 2024",
+    title: "EManager",
+    description:
+      "EManager is a Java-based employee management system developed using object-oriented programming (OOP) concepts. It provides a simple yet effective platform for managing employee data.",
+    technologies: ["Java", "MySQL"],
+    github: "https://github.com/smbhathiya/EManager.git",
+    date: "January 2024",
   },
-  // Add more projects as needed
+  {
+    id: 3,
+    title: "DriveMate",
+    description:
+      "DriveMate is a research project, developed using Java, is designed for driving learning schools to train drivers effectively. The software aims to replace traditional training methods with a comprehensive online system, enhancing the learning experience for new drivers.",
+    technologies: ["Java", "MySQL", "HTML"],
+    github: "https://github.com/smbhathiya/DriveMateLearner.git",
+    date: "May 2024",
+  },
+  {
+    id: 4,
+    title: "Sweet Cupcakes",
+    description:
+      "Sweet cupcake is an android app developed for a cupcake shop to sell cupcakes. Customers can order cupcakes using this and shop can manage products and orders using this app.",
+    technologies: ["Java", "Firebase", "XML", "Android Studio"],
+    github: "https://github.com/smbhathiya/SweetCupCakes.git",
+    date: "April 2024",
+  },
+  {
+    id: 5,
+    title: "Cineplex Cinema",
+    description:
+      "Cineplex is a website that developed for a cinema hall to sell tickets online. Using this website users and purchase tickets and book seats and also can get details about ongoing and upcoming movies.",
+    technologies: ["HTML", "CSS", "Bootstrap", "PHP", "MySQL"],
+    github: "https://github.com/smbhathiya/CineplexCinemaWebsite.git",
+    date: "April 2024",
+  },
 ];
 
 const Projects = () => {
@@ -52,11 +76,13 @@ const Projects = () => {
                 y: projectsInView ? 0 : 20,
               }}
               transition={{ duration: 0.5 }}
-              className="bg-brandDark p-6 rounded-lg shadow-lg "
+              className="bg-brandDark p-6 rounded-lg shadow-lg transform transition-transform hover:scale-110 cursor-pointer"
             >
-              <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-lg mb-4">{project.description}</p>
-              <div className="text-sm mb-4">
+              <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+              <hr />
+              <p className="text-lg mb-4 mt-4 ">{project.description}</p>
+              <hr />
+              <div className="text-sm mb-4 mt-4">
                 <strong>Technologies:</strong> {project.technologies.join(", ")}
               </div>
               <div className="flex space-x-4">
