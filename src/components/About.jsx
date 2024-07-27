@@ -12,6 +12,8 @@ const data = {
   country: "Sri Lanka",
   city: "Kuliyapitiya",
   address: "91/2, Kurumbahenpitiyawaththa, Anukkane",
+  description:
+    " I am an enthusiastic, self-motivated, responsible, and hardworking individual. I adapt to challenging situations and work effectively both independently and as part of a team. My experience as a team leader on campus has honed my leadership and collaborative skills. I am capable of working under pressure and meeting deadlines, and I approach tasks with an active and dynamic mindset to ensure successful completion.",
 };
 
 const About = () => {
@@ -41,19 +43,17 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-center"
           >
-            <p className="text-lg leading-relaxed mb-4 text-left bg-box p-5 rounded-lg hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
-              <strong>Hi, I'm {data.name},</strong>
-              <br /> I completed my {data.education} at ICBT Campus, offered by
-              Cardiff Metropolitan University, and am currently pursuing a
-              Top-up Degree in Software Engineering. <br />
-              <br /> I am an enthusiastic, self-motivated, responsible, and
-              hardworking individual. I adapt to challenging situations and work
-              effectively both independently and as part of a team. My
-              experience as a team leader on campus has honed my leadership and
-              collaborative skills. I am capable of working under pressure and
-              meeting deadlines, and I approach tasks with an active and dynamic
-              mindset to ensure successful completion.
-            </p>
+            <div className="bg-brandDark p-4 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4">About Me</h3>
+              <p className="text-lg leading-relaxed mb-4 text-left  p-5 rounded-lg hover:bg-box hover:cursor-pointer hover:scale-105 duration-200">
+                <strong>Hi, I'm {data.name},</strong>
+                <br /> I completed my {data.education} at ICBT Campus, offered
+                by Cardiff Metropolitan University, and am currently pursuing a
+                Top-up Degree in Software Engineering. <br />
+                <br />
+                <p className="hidden md:block">{data.description}</p>
+              </p>
+            </div>
           </motion.div>
           {/* Details */}
           <motion.div
@@ -64,28 +64,31 @@ const About = () => {
               y: detailsInView ? 0 : 50,
             }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-top"
           >
-            <ul className="text-lg leading-relaxed">
-              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
-                <strong>Name:</strong> {data.name}
-              </li>
-              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
-                <strong>Education:</strong> {data.education}
-              </li>
-              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
-                <strong>Current Study:</strong> {data.currentStudy}
-              </li>
-              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
-                <strong>Country:</strong> {data.country}
-              </li>
-              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
-                <strong>City:</strong> {data.city}
-              </li>
-              <li className="bg-box p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
-                <strong>Address:</strong> {data.address}
-              </li>
-            </ul>
+            <div className="bg-brandDark p-4 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4">Details</h3>
+              <ul className="text-lg leading-relaxed">
+                <li className=" p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                  <strong>Name:</strong> {data.name}
+                </li>
+                <li className=" p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                  <strong>Education:</strong> {data.education}
+                </li>
+                <li className=" p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                  <strong>Current Study:</strong> {data.currentStudy}
+                </li>
+                <li className=" p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                  <strong>Country:</strong> {data.country}
+                </li>
+                <li className=" p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                  <strong>City:</strong> {data.city}
+                </li>
+                <li className=" p-3 rounded-lg mb-2 hover:bg-primary hover:cursor-pointer hover:scale-105 duration-200">
+                  <strong>Address:</strong> {data.address}
+                </li>
+              </ul>
+            </div>
           </motion.div>
         </div>
       </div>

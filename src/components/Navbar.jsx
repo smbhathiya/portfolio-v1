@@ -23,7 +23,7 @@ const Menu = [
     link: "/#projects",
   },
   {
-    id: 4,
+    id: 5,
     name: "Contact",
     link: "/#contact",
   },

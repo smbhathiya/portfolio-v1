@@ -14,7 +14,12 @@ export default {
         secondary: "#22356e",
         light: "#426ff5",
         box: "#1f2f5e",
+        boxG: "#1f5e33",
+        boxGh: "#2d8047",
         brandDark: "#0b0e17",
+        fb: "#1877F2",
+        github: "#770cc9",
+        linkedin: "#0077B5",
         
       },
       container:{
