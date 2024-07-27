@@ -62,40 +62,64 @@ const skillData = [
     src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/MySQL-Light.svg",
   },
   {
-    id: 4,
+    id: 11,
     name: "Node.js",
     alt: "Node.js",
-    src: "https://img.icons8.com/ios/50/000000/nodejs.png", // Placeholder
+    src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/NodeJS-Light.svg",
   },
   {
-    id: 5,
+    id: 12,
     name: "React",
     alt: "React",
     src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/React-Light.svg",
   },
   {
-    id: 6,
+    id: 13,
     name: "Tailwind CSS",
     alt: "Tailwind CSS",
     src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/TailwindCSS-Light.svg",
   },
   {
-    id: 9,
-    name: "JavaScript",
-    alt: "JavaScript",
-    src: "https://img.icons8.com/ios/50/000000/javascript.png", // Placeholder
-  },
-  {
-    id: 11,
+    id: 14,
     name: "MongoDB",
     alt: "MongoDB",
-    src: "https://img.icons8.com/ios/50/000000/mongodb.png", // Placeholder
+    src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/MongoDB.svg",
   },
   {
-    id: 3,
+    id: 15,
     name: ".NET Framework",
     alt: ".NET Framework",
     src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/DotNet.svg",
+  },
+  {
+    id: 16,
+    name: "Android Studio",
+    alt: "Android Studio",
+    src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/AndroidStudio-Light.svg",
+  },
+  {
+    id: 17,
+    name: "Visual Studio",
+    alt: "Visual Studio",
+    src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/VisualStudio-Dark.svg",
+  },
+  {
+    id: 18,
+    name: "VS Code",
+    alt: "VS Code",
+    src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/VSCode-Dark.svg",
+  },
+  {
+    id: 19,
+    name: "Git",
+    alt: "Git",
+    src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Git.svg",
+  },
+  {
+    id: 20,
+    name: "Adobe Photoshop",
+    alt: "Adobe Photoshop",
+    src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Photoshop.svg",
   },
 ];
 
@@ -103,13 +127,24 @@ const Skills = () => {
   return (
     <section id="skills" className="bg-brandDark text-white py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">Skills</h2>
-        <div className="mt-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <h2 className="text-4xl font-bold text-center mb-8">
+          Languages and Tools
+        </h2>
+        <div className="mt-12 ">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
             {skillData.map((skill) => (
-              <div key={skill.id} className="flex flex-col items-center">
+              <div
+                key={skill.id}
+                className="flex flex-col items-center hover:scale-125 duration-200 cursor-pointer"
+              >
                 <span className="text-3xl">
-                  <img src={skill.src} alt={skill.alt} width="40" height="40" />
+                  <img
+                    src={skill.src}
+                    alt={skill.alt}
+                    width="40"
+                    height="40"
+                    className=""
+                  />
                 </span>
                 <span>{skill.name}</span>
               </div>
