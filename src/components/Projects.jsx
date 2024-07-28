@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// Define your projects data
 const projects = [
   {
     id: 1,
@@ -61,6 +60,7 @@ const Projects = () => {
     <section id="projects" className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4 ">
         <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
+
         <div
           ref={projectsRef}
           className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  ${
@@ -76,7 +76,7 @@ const Projects = () => {
                 y: projectsInView ? 0 : 20,
               }}
               transition={{ duration: 0.5 }}
-              className="bg-brandDark p-6 rounded-lg shadow-lg transform transition-transform hover:scale-110 cursor-pointer"
+              className="bg-brandDark p-6 rounded-lg shadow-lg transform transition-transform crsor-pointer"
             >
               <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
               <hr />
