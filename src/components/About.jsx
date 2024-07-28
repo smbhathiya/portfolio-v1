@@ -44,17 +44,23 @@ const About = () => {
             className="flex flex-col justify-center"
           >
             <div className="bg-brandDark p-4 rounded-lg hover:scale-105 duration-200">
-              <h3 className="text-2xl font-semibold mb-4">About Me</h3>
-              <p className="text-lg leading-relaxed mb-4 text-left  p-5 rounded-lg hover:bg-box hover:cursor-pointer ">
-                <strong>Hi, I'm {data.name},</strong>
-                <br /> I completed my {data.education} at ICBT Campus, offered
-                by Cardiff Metropolitan University, and am currently pursuing a
-                Top-up Degree in Software Engineering. <br />
+              <h3 className="text-2xl font-semibold mb-4 hidden md:block ">
+                About Me
+              </h3>
+
+              <div className="text-lg leading-relaxed m-2 text-left  p-4 rounded-lg hover:bg-box hover:cursor-pointer ">
+                <p>
+                  <strong>Hi, I'm {data.name},</strong>
+                  <br /> I completed my {data.education} at ICBT Campus, offered
+                  by Cardiff Metropolitan University, and am currently pursuing
+                  a Top-up Degree in Software Engineering. <br />
+                </p>
                 <br />
                 <p className="hidden md:block">{data.description}</p>
-              </p>
+              </div>
             </div>
           </motion.div>
+
           {/* Details */}
           <motion.div
             ref={detailsRef}
