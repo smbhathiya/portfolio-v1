@@ -10,13 +10,19 @@ export default {
         sans: ["Poppins","sans-serif"],
       },
       colors:{
+        main: "#008080",
+        mainLight:"#02d9d9",
+        mainDark:"#185959",
+        iconLight:"#0ee6e6",
+        brandDark: "#0b0e17",
+
         primary: "#2c438a",
         secondary: "#22356e",
         light: "#426ff5",
         box: "#1f2f5e",
         boxG: "#1f5e33",
         boxGh: "#2d8047",
-        brandDark: "#0b0e17",
+        
         fb: "#1877F2",
         github: "#770cc9",
         linkedin: "#0077B5",
