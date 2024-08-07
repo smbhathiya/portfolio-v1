@@ -15,6 +15,8 @@ export default {
         mainDark:"#185959",
         iconLight:"#0ee6e6",
         brandDark: "#0b0e17",
+        bgDark2: "#1f2330",
+        bgDark3: "#2b2f44",
 
         primary: "#2c438a",
         secondary: "#22356e",

@@ -36,10 +36,10 @@ const Home = () => {
                 data-aos-once="true"
                 className="text-2xl sm:text-3xl lg:text-3xl"
               >
-                <span className="bg-clip-text text-mainLight font-monospace">
+                <span className="bg-clip-text text-mainLight font-monospace text-2xl">
                   Hi, I'm Bhathiya Lakshan
                 </span>
-                <p className="text-base sm:text-justify sm:p-0 p-1 font-monospace mt-2">
+                <p className="text-lg sm:text-justify sm:p-0 p-1 font-monospace mt-2">
                   I’m a software engineer with a Higher Diploma in Computing and
                   Software Engineering from ICBT Campus, offered by Cardiff
                   Metropolitan University. I focus on mobile and web app
