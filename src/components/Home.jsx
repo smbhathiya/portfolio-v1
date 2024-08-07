@@ -31,7 +31,7 @@ const Home = () => {
                 data-aos-once="true"
                 className="text-2xl sm:text-3xl lg:text-3xl font-cursive"
               >
-                Welcome to My Profile.
+                Hi, I'm Bhathiya Lakshan
                 <br /> I'm{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-light to-light/90 font-sans font-bold ">
                   Bhathiya Lakshan,

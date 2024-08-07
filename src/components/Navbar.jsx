@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Menu = [
-  { id: 1, name: "Home", link: "/#home" },
+  { id: 1, name: "Home", link: "/#navbar" },
   { id: 2, name: "About", link: "/#about" },
   { id: 3, name: "Skills", link: "/#skills" },
   { id: 4, name: "Projects", link: "/#projects" },
@@ -34,7 +34,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
+    <section id="navbar">
       <div
         className="bg-brandDark text-white fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md"
         style={{ backgroundColor: `rgba(11, 14, 23, ${bgOpacity})` }}
@@ -88,8 +88,19 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            {menuOpen && (
-              <div className="sm:hidden flex flex-col items-center mt-4 space-y-2">
+            <div
+              className={`sm:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${
+                menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+              style={{ transitionDuration: "300ms" }}
+            >
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="text-2xl absolute top-4 right-4"
+              >
+                <FaTimes />
+              </button>
+              <div className="flex flex-col items-center space-y-4 mt-12">
                 {Menu.map((menu) => (
                   <a
                     key={menu.id}
@@ -102,13 +113,13 @@ const Navbar = () => {
                 ))}
                 <DownloadCVButton />
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
 
       <div className="pt-16">{/* Your page content goes here */}</div>
-    </>
+    </section>
   );
 };
 
