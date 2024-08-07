@@ -125,13 +125,13 @@ const skillData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-brandDark text-white py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">
+    <section id="skills" className="bg-brandDark text-white ">
+      <div className="container mx-auto px-4 pb-10">
+        <h2 className="text-4xl text-mainLight text-center mb-8">
           Languages and Tools
         </h2>
-        <div className="mt-12 ">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
+        <div className="mt-12 bg-bgDark2 pt-12 pb-12  p-2 rounded-2xl ">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
             {skillData.map((skill) => (
               <div
                 key={skill.id}
@@ -141,8 +141,8 @@ const Skills = () => {
                   <img
                     src={skill.src}
                     alt={skill.alt}
-                    width="40"
-                    height="40"
+                    width="45"
+                    height="45"
                     className=""
                   />
                 </span>
@@ -152,6 +152,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
+      <hr className="my-4 mx-auto w-[90%] border-t-2 border-main" />
     </section>
   );
 };
