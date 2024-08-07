@@ -125,7 +125,7 @@ const skillData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-brandDark text-white ">
+    <section id="skills" className="bg-brandDark text-white py-12">
       <div className="container mx-auto px-4 pb-10">
         <h2 className="text-4xl text-mainLight text-center mb-8">
           Languages and Tools

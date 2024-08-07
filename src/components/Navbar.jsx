@@ -33,6 +33,23 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const offset = 40;
+        window.scrollTo({
+          top: document.querySelector(hash)?.offsetTop - offset,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
     <section id="navbar">
       <div
