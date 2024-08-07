@@ -7,7 +7,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <section id="home">
       <div className="min-h-[550px] sm:min-h-[600px] bg-brandDark flex justify-center items-center text-white">
         <div className="container pb-8 sm:pb-0">
           <div className="grid grid-cols-1 sm:grid-cols-2">
@@ -51,7 +51,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

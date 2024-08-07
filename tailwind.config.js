@@ -10,6 +10,11 @@ export default {
         sans: ["Poppins","sans-serif"],
       },
       colors:{
+        main: "#008080",
+        mainLight:"#02d9d9",
+        mainDark:"#185959",
+
+
         primary: "#2c438a",
         secondary: "#22356e",
         light: "#426ff5",
