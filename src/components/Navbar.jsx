@@ -92,7 +92,9 @@ const Navbar = () => {
               className={`sm:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${
                 menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
               }`}
-              style={{ transitionDuration: "300ms" }}
+              style={{
+                transitionDuration: "300ms",
+              }}
             >
               <button
                 onClick={() => setMenuOpen(false)}
@@ -117,8 +119,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      <div className="pt-16">{/* Your page content goes here */}</div>
     </section>
   );
 };

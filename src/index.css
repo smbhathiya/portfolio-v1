@@ -20,5 +20,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+  body {
+    @apply bg-brandDark;
+  }
   
