@@ -125,8 +125,8 @@ const skillData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-brandDark text-white py-12">
-      <div className="container mx-auto px-4 pb-10">
+    <section id="skills" className="bg-brandDark text-white ">
+      <div className="container mx-auto px-4 py-12">
         <h2 className="text-4xl text-mainLight text-center mb-8">
           Languages and Tools
         </h2>

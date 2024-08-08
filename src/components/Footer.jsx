@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div id="skills" className="bg-gray-900 text-white p-4">
+    <div className="bg-brandDark text-white p-4 sm:mx-10 sm:mr-10">
       <footer>
         <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span className="text-base text-white sm:text-center">
+          <span className="text-base  sm:text-center text-mainLight">
             © 2024{" "}
             <a href="/" className="hover:underline">
               MY PORTFOLIO
