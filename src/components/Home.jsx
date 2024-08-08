@@ -55,6 +55,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-main hover:text-iconLight hover:scale-125 duration-300"
+                    title="Contact me from whatsapp"
                   >
                     <IoLogoWhatsapp size={40} />
                   </a>
@@ -63,6 +64,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-main hover:text-iconLight hover:scale-125 duration-300"
+                    title="Find me on LinkedIn"
                   >
                     <IoLogoLinkedin size={40} />
                   </a>
@@ -71,6 +73,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-main hover:text-iconLight hover:scale-125 duration-300"
+                    title="Find ome on Facebook"
                   >
                     <FaFacebook size={40} />
                   </a>
@@ -79,6 +82,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-main hover:text-iconLight hover:scale-125 duration-300"
+                    title="Find me on Github"
                   >
                     <FaGithub size={40} />
                   </a>
