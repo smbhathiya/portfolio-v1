@@ -11,6 +11,7 @@ const projects = [
       "My portfolio website showcases various projects and skills. Built with React and Vite for a modern and efficient development experience, it uses Tailwind CSS for styling. The site is deployed using Firebase, ensuring reliable and scalable hosting.",
     technologies: ["React", "Vite", "Tailwind CSS", "Firebase"],
     github: "https://github.com/smbhathiya/PortfolioWebsite.git",
+    livePreview: "https://my-web-32130.web.app",
     date: "August 2024",
     image: assets.portfolio_img,
   },
@@ -73,7 +74,7 @@ const Projects = () => {
   });
 
   return (
-    <section id="projects" className="bg-brandDark text-white ">
+    <section id="projects" className="bg-brandDark text-white">
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-4xl text-mainLight text-center mb-8">Projects</h2>
 
@@ -120,16 +121,32 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-col items-end">
+                <div className="flex space-x-2 items-center">
+                  {/* Conditionally render Live Preview button */}
+                  {project.livePreview && (
+                    <a
+                      href={project.livePreview}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-600"
+                      title="View live preview"
+                    >
+                      Live Preview
+                    </a>
+                  )}
+
+                  {/* GitHub button */}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-main text-white px-4 py-2 rounded-lg hover:bg-mainDark mb-2"
-                    title="View project on Github"
+                    className="bg-main text-white px-4 py-2 rounded-lg hover:bg-mainDark"
+                    title="View project on GitHub"
                   >
                     GitHub
                   </a>
+
+                  {/* Date display */}
                   <div className="text-xs text-gray-400">{project.date}</div>
                 </div>
               </div>
