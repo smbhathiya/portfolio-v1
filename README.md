@@ -42,34 +42,6 @@ Check out my portfolio website [here](https://my-web-32130.web.app/)
     ```
    Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-## Configuration
-
-Configure environment variables if needed by creating a `.env` file in the root directory. Add any necessary environment variables required for your project.
-
-## Deployment
-
-This project is deployed on Firebase Hosting. To deploy your own version:
-
-1. **Install Firebase CLI:**
-    ```bash
-    npm install -g firebase-tools
-    ```
-
-2. **Login to Firebase:**
-    ```bash
-    firebase login
-    ```
-
-3. **Initialize Firebase in Your Project:**
-    ```bash
-    firebase init
-    ```
-   Follow the prompts to set up Firebase Hosting.
-
-4. **Deploy to Firebase:**
-    ```bash
-    firebase deploy
-    ```
 
 ## Styling
 
