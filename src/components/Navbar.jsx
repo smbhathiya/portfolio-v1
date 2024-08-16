@@ -64,6 +64,12 @@ const Navbar = () => {
                 href="/"
                 className="text-2xl sm:text-4xl flex justify-center text-mainLight items-center gap-2 tracking-wider font-sans ml-4"
               >
+                {/* Logo Image */}
+                <img
+                  src="/logo.png"
+                  alt="Logo"
+                  className="h-8 sm:h-10 w-auto"
+                />
                 BHATHIYA
               </a>
             </div>

@@ -5,6 +5,7 @@ import Sweetcupcakes_img from './Sweetcupcakes.png'
 import Drivemate_img from './drivemate.png'
 import emanager_img from './emanager.png'
 import portfolio_img from './portfolio.png'
+import weather_app_img from './weather_app.png'
 
 
 export const assets = {
@@ -15,4 +16,5 @@ export const assets = {
     Drivemate_img,
     emanager_img,
     portfolio_img,
+    weather_app_img,
 }
