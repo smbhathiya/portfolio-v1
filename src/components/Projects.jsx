@@ -5,6 +5,18 @@ import { assets } from "../assets/assets";
 
 const projects = [
   {
+    id: 7,
+    title: "Today Weather",
+    description:
+      "The 'Today Weather' app provides real-time weather updates using data from the OpenWeather API. Built with Next.js for server-side rendering and fast performance, it leverages Tailwind CSS for responsive and modern styling. The app is optimized for scalability and efficiency, offering users an intuitive experience.",
+    technologies: ["Next.js", "Tailwind CSS", "OpenWeather API"],
+    github: "https://github.com/smbhathiya/WeatherApp.git",
+    livePreview:
+      "https://weather-app-git-master-smbhathiyas-projects.vercel.app/",
+    date: "August 2024",
+    image: assets.weather_app_img,
+  },
+  {
     id: 6,
     title: "Portfolio",
     description:
