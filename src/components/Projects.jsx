@@ -6,6 +6,17 @@ import { assets } from "../assets/assets";
 const projects = [
   {
     id: 7,
+    title: "FileMaster Tools",
+    description:
+      "FileMaster Tools is a comprehensive application designed for managing and organizing files efficiently. With features like merging multiple Excel files into a single file and highlighting duplicate records, it enhances data handling capabilities. The application also includes a user-friendly interface with an 'About' form to provide essential information about the app. Built with Visual Studio and C#, it ensures robust performance and a seamless user experience.",
+    technologies: ["Visual Studio", "C#"],
+    github: "https://github.com/smbhathiya/FileMasterTools.git",
+    release: "https://github.com/smbhathiya/FileMasterTools/releases",
+    date: "August 2024",
+    image: assets.filemastertools_img,
+  },
+  {
+    id: 7,
     title: "Today Weather",
     description:
       "The 'Today Weather' app provides real-time weather updates using data from the OpenWeather API. Built with Next.js for server-side rendering and fast performance, it leverages Tailwind CSS for responsive and modern styling. The app is optimized for scalability and efficiency, offering users an intuitive experience.",
@@ -34,6 +45,7 @@ const projects = [
       "Debra is a service-oriented project developed using ASP.NET. It encompasses both a website and a Windows desktop application. The project aims to provide seamless integration between these platforms to deliver efficient service solutions.",
     technologies: ["ASP.NET", "C#", "Bootstrap", "CSS", "Visual Studio"],
     github: "https://github.com/smbhathiya/DebraEventmanagement.git",
+
     date: "June 2024",
     image: assets.debra_img,
   },
@@ -44,6 +56,7 @@ const projects = [
       "EManager is a Java-based employee management system developed using object-oriented programming (OOP) concepts. It provides a simple yet effective platform for managing employee data.",
     technologies: ["Java", "MySQL"],
     github: "https://github.com/smbhathiya/EManager.git",
+
     date: "January 2024",
     image: assets.emanager_img,
   },
@@ -134,8 +147,8 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="flex space-x-2 items-center">
-                  {/* Conditionally render Live Preview button */}
-                  {project.livePreview && (
+                  {/* Conditionally render Live Preview or Release button */}
+                  {project.livePreview ? (
                     <a
                       href={project.livePreview}
                       target="_blank"
@@ -145,7 +158,17 @@ const Projects = () => {
                     >
                       Live Preview
                     </a>
-                  )}
+                  ) : project.release ? (
+                    <a
+                      href={project.release}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-green-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-green-600"
+                      title="View release"
+                    >
+                      Release
+                    </a>
+                  ) : null}
 
                   {/* GitHub button */}
                   <a
