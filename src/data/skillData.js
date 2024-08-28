@@ -13,7 +13,7 @@ export const skillData = [
   { id: 12, name: "C++", alt: "C++", src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/CPP.svg", type: "language" },
   { id: 13, name: "HTML", alt: "HTML", src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/HTML.svg", type: "language" },
   { id: 14, name: "CSS", alt: "CSS", src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/CSS.svg", type: "language" },
-  { id: 15, name: "React", alt: "React", src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/React-Light.svg", type: "framework" },
+  { id: 15, name: "NextJS", alt: "NextJS", src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons//NextJS-Light.svg", type: "framework" },
   { id: 16, name: "PostgreSQL", alt: "PostgreSQL", src: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/PostgreSQL-Light.svg", type: "database" },
 
 ];
