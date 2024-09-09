@@ -11,7 +11,7 @@ const Menu = [
 
 const DownloadCVButton = () => (
   <button className="bg-main text-white p-2 px-4 mr-4 font-sans rounded hover:bg-mainDark">
-    <a href="Bhathiya Lakshan.pdf" download="Bhathiya_Lakshan_CV.pdf">
+    <a href="MyResume.pdf" download="Bhathiya lakshan.pdf">
       Download Resume
     </a>
   </button>
@@ -62,7 +62,7 @@ const Navbar = () => {
             <div data-aos="fade-down" data-aos-once="true">
               <a
                 href="/"
-                className="text-2xl sm:text-4xl flex justify-center text-mainLight items-center gap-2 tracking-wider font-sans ml-4"
+                className="text-2xl sm:text-4xl flex justify-center text-mainLight items-center gap-2 tracking-wider font-sans ml-6"
               >
                 {/* Logo Image */}
                 <img
