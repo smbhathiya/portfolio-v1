@@ -12,7 +12,7 @@ const Menu = [
 const DownloadCVButton = () => (
   <button className="bg-main text-white p-2 px-4 font-sans rounded hover:bg-mainDark">
     <a href="Bhathiya Lakshan.pdf" download="Bhathiya_Lakshan_CV.pdf">
-      Download CV
+      Download Resume
     </a>
   </button>
 );
