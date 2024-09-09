@@ -10,7 +10,7 @@ const Menu = [
 ];
 
 const DownloadCVButton = () => (
-  <button className="bg-main text-white p-2 px-4 font-sans rounded hover:bg-mainDark">
+  <button className="bg-main text-white p-2 px-4 mr-4 font-sans rounded hover:bg-mainDark">
     <a href="Bhathiya Lakshan.pdf" download="Bhathiya_Lakshan_CV.pdf">
       Download Resume
     </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
                   <li key={menu.id}>
                     <a
                       href={menu.link}
-                      className="inline-block font-sans text-lg py-4 px-3 text-white/70 hover:text-white duration-200"
+                      className="inline-block font-sans text-lg py-4 px-3 text-white/70 hover:text-white duration-200 hover:underline"
                     >
                       {menu.name}
                     </a>
