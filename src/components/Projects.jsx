@@ -118,7 +118,7 @@ const Projects = () => {
                 y: projectsInView ? 0 : 20,
               }}
               transition={{ duration: 0.1 }}
-              className="bg-bgDark2 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 hover:shadow-main"
+              className="bg-bgDark2 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 "
             >
               {/* Image Section */}
               <div className="flex-shrink-0 md:w-1/3">

@@ -4,8 +4,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Menu = [
   { id: 1, name: "Home", link: "/#navbar" },
   { id: 2, name: "About", link: "/#about" },
-  { id: 3, name: "Languages & Tools", link: "/#skills" },
-  { id: 4, name: "Projects", link: "/#projects" },
+  { id: 3, name: "Projects", link: "/#projects" },
+  { id: 4, name: "Languages & Tools", link: "/#skills" },
   { id: 5, name: "Contact", link: "/#contact" },
 ];
 
