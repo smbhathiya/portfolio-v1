@@ -11,7 +11,7 @@ const Menu = [
 
 const DownloadCVButton = () => (
   <button className="bg-main text-white p-2 px-4 mr-4 font-sans rounded hover:bg-mainDark">
-    <a href="Bhathiya lakshan.pdf" download="Bhathiya lakshan.pdf">
+    <a href="Bhathiya Lakshan.pdf" download="Bhathiya lakshan.pdf">
       Download Resume
     </a>
   </button>
