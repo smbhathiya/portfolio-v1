@@ -8,7 +8,7 @@ const DownloadCVButton = () => {
 
     setTimeout(() => {
       const link = document.createElement("a");
-      link.href = "Bhathiya Lakshan.pdf";
+      link.href = "BhathiyaLakshan.pdf";
       link.download = "Bhathiya-Lakshan.pdf";
       document.body.appendChild(link);
       link.click();
