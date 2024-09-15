@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import DownloadCVButton from "./DownloadCVButton"; // Import the DownloadCVButton component
 
 const Menu = [
   { id: 1, name: "Home", link: "/#navbar" },
@@ -8,14 +9,6 @@ const Menu = [
   { id: 4, name: "Languages & Tools", link: "/#skills" },
   { id: 5, name: "Contact", link: "/#contact" },
 ];
-
-const DownloadCVButton = () => (
-  <button className="bg-main text-white p-2 px-4 mr-4 font-sans rounded hover:bg-mainDark">
-    <a href="Bhathiya Lakshan.pdf" download="Bhathiya lakshan.pdf">
-      Download Resume
-    </a>
-  </button>
-);
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
