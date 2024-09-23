@@ -52,7 +52,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <div className="bg-brandDark hover:bg-bgDark2 p-6 rounded-2xl duration-300 sm:text-justify text-center cursor-pointer">
+            <div className="bg-brandDark  p-6 rounded-2xl duration-300 sm:text-justify text-center cursor-pointer">
               <div className="flex items-center justify-center sm:justify-start mb-6">
                 <img
                   src={assets.profile_img}
@@ -83,7 +83,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <div className="bg-brandDark p-6 rounded-2xl hover:bg-bgDark2 duration-300">
+            <div className="bg-brandDark p-6 rounded-2xl duration-300">
               <ul className="text-lg leading-relaxed space-y-2">
                 <ListItem label="Name" value={data.name} />
                 <ListItem label="Education" value={data.education} />
