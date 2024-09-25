@@ -2,17 +2,17 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-brandDark text-white p-4 sm:mx-10 sm:mr-10">
+    <section className="bg-brandDark text-white rounded-3xl p-4 m-4">
       <footer>
-        <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span className="text-base  sm:text-center text-mainLight">
+        <div className="container mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+          <span className="text-base sm:text-center text-mainLight">
             © 2024{" "}
             <a href="/" className="hover:underline">
               MY PORTFOLIO
             </a>
             . All Rights Reserved
           </span>
-          <ul className="flex flex-wrap items-center mt-3 text-base font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+          <ul className="flex flex-wrap items-center mt-3 text-base font-medium text-white/70 sm:mt-0">
             <li>
               <a
                 href="/#navbar"
@@ -56,7 +56,7 @@ const Footer = () => {
           </ul>
         </div>
       </footer>
-    </div>
+    </section>
   );
 };
 

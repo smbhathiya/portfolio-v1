@@ -16,7 +16,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-brandDark">
+    <div className="bg-bgDark2">
       <Navbar />
       <Home />
       <About />

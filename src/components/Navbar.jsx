@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import DownloadCVButton from "./DownloadCVButton"; // Import the DownloadCVButton component
+import DownloadCVButton from "./DownloadCVButton"; 
 
 const Menu = [
   { id: 1, name: "Home", link: "/#navbar" },
@@ -22,7 +22,6 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,24 +29,27 @@ const Navbar = () => {
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash) {
-        const offset = 40;
-        window.scrollTo({
-          top: document.querySelector(hash)?.offsetTop - offset,
-          behavior: "smooth",
-        });
+        const offset = 100; // Offset for the navbar height
+        const element = document.querySelector(hash);
+        if (element) {
+          const topPosition = element.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({
+            top: topPosition,
+            behavior: "smooth",
+          });
+        }
       }
     };
 
     window.addEventListener("hashchange", handleHashChange);
-
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   return (
     <section id="navbar">
       <div
-        className="bg-brandDark text-white fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md"
-        style={{ backgroundColor: `rgba(11, 14, 23, ${bgOpacity})` }}
+        className="bg-bgDark width-full z-50 mx-4 mr-4 rounded-bl-3xl rounded-br-3xl fixed top-0 left-0 right-0 transition-all duration-300 backdrop-blur-md"
+        style={{ backgroundColor: `rgba(6, 6, 8, ${bgOpacity})` }}
       >
         <div className="container p-3 py-4 relative">
           <div className="flex justify-between items-center">
@@ -57,21 +59,16 @@ const Navbar = () => {
                 href="/"
                 className="text-2xl sm:text-4xl flex justify-center text-mainLight items-center gap-2 tracking-wider font-sans ml-6"
               >
-                {/* Logo Image */}
-                <img
-                  src="/logo.png"
-                  alt="Logo"
-                  className="h-8 sm:h-10 w-auto"
-                />
+                <img src="/logo.png" alt="Logo" className="h-8 sm:h-10 w-auto" />
                 BHATHIYA
               </a>
             </div>
 
             {/* Hamburger Icon */}
-            <div className="sm:hidden">
+            <div className="md:hidden z-50">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="text-2xl focus:outline-none mr-4"
+                className="text-2xl focus:outline-none mr-4 text-white"
               >
                 {menuOpen ? <FaTimes /> : <FaBars />}
               </button>
@@ -82,22 +79,20 @@ const Navbar = () => {
               data-aos="fade-down"
               data-aos-once="true"
               data-aos-delay="300"
-              className="hidden sm:flex items-center justify-between w-full"
+              className="hidden md:flex items-center justify-between w-full"
             >
-              {/* Menu items centered */}
               <ul className="flex items-center gap-4 flex-grow justify-center">
                 {Menu.map((menu) => (
                   <li key={menu.id}>
                     <a
                       href={menu.link}
-                      className="inline-block font-sans text-lg py-4 px-3 text-white/70 hover:text-white duration-200 hover:underline"
+                      className="inline-block font-sans text-lg py-4 px-3 text-white/70 hover:text-white duration-200"
                     >
                       {menu.name}
                     </a>
                   </li>
                 ))}
               </ul>
-              {/* Download CV Button aligned to the right */}
               <div className="ml-auto">
                 <DownloadCVButton />
               </div>
@@ -105,18 +100,14 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-              className={`sm:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${
-                menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-              }`}
+              className={`md:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
               style={{
                 transitionDuration: "300ms",
+                zIndex: 40,
               }}
             >
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="text-2xl absolute top-4 right-4"
-              >
-                <FaTimes />
+              <button onClick={() => setMenuOpen(false)} className="text-2xl absolute top-4 right-4">
+                {/* <FaTimes /> */}
               </button>
               <div className="flex flex-col items-center space-y-4 mt-12">
                 {Menu.map((menu) => (
@@ -135,6 +126,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <div className="pt-[65px]" />
     </section>
   );
 };

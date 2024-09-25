@@ -1,10 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import framer-motion for animation
+import { motion } from "framer-motion";
 import { projects } from "../data/projectData";
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-brandDark text-white">
+    <section id="projects" className="bg-brandDark text-white m-4 rounded-3xl p-4">
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-4xl text-mainLight text-center mb-8">Projects</h2>
 
@@ -12,9 +12,9 @@ const Projects = () => {
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and y-axis 20px down
-              animate={{ opacity: 1, y: 0 }} // Animate to opacity 1 and y-axis 0px (moves up)
-              transition={{ duration: 0.5 }} // Duration of the animation
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5 }} 
               className="bg-bgDark2 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6"
             >
               {/* Image Section */}
@@ -87,7 +87,6 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      <hr className="my-4 mx-auto w-[90%] border-t-2 border-main" />
     </section>
   );
 };

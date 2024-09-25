@@ -36,9 +36,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-brandDark text-white py-12 relative overflow-hidden"
+      className="bg-brandDark text-white py-12 relative overflow-hidden m-4 rounded-3xl p-4"
     >
-      <div className="container mx-auto px-4 pb-6">
+      <div className="container mx-auto px-4 pb-6 ">
         <h2 className="text-4xl text-center mb-8 text-mainLight">About Me</h2>
         <div className="flex flex-col md:flex-row gap-8 items-start">
           {/* Description */}
@@ -96,7 +96,6 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-      <hr className="my-4 mx-auto w-[90%] border-t-2 border-main" />
     </section>
   );
 };

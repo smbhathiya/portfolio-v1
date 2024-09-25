@@ -13,22 +13,22 @@ const socialLinks = {
 const Home = () => {
   return (
     <section id="home">
-      <div className="min-h-[400px] sm:min-h-[600px] bg-brandDark flex justify-center items-center text-white sm:mt-10 mt-0">
+      <div className="min-h-[400px] sm:min-h-[500px] bg-brandDark flex justify-center items-center text-white sm:mt-10 m-4 rounded-3xl p-4">
         <div className="container pb-6 sm:pb-1">
           <div className="grid grid-cols-1 sm:grid-cols-2">
             {/* Image Section */}
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="300"
-              className="min-h-[200px] flex justify-center items-center relative order-1 sm:order-2 mt-20 sm:mt-0"
-            >
-              <img
-                data-aos-once="true"
-                src={assets.profile_img}
-                alt="profile_img"
-                className="w-[200px] sm:w-[350px] sm:scale-100 mx-auto rounded-3xl hover:scale-110 duration-500 cursor-pointer"
-              />
-            </div>
+  <div
+    data-aos="zoom-in"
+    data-aos-duration="300"
+    className="min-h-[200px] flex justify-center items-center sm:order-2 order-1 mt-20 sm:mt-0"
+  >
+    <img
+      data-aos-once="true"
+      src={assets.profile_img}
+      alt="profile_img"
+      className="w-[200px] sm:w-[350px] mx-auto rounded-3xl hover:scale-110 duration-500 cursor-pointer"
+    />
+  </div>
             {/* Text Section */}
             <div className="flex flex-col justify-center gap-6 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1">
               <h1
@@ -92,7 +92,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <hr className="my-4 mx-auto w-[90%] border-t-2 border-main" />
     </section>
   );
 };
