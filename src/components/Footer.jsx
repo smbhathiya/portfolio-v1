@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className="bg-brandDark text-white rounded-3xl p-4 m-4">
+    <section className="bg-brandDark text-white rounded-3xl p-4 m-2 md:m-4 mb-0 rounded-br-none rounded-bl-none ">
       <footer>
         <div className="container mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
           <span className="text-base sm:text-center text-mainLight">
@@ -12,7 +12,7 @@ const Footer = () => {
             </a>
             . All Rights Reserved
           </span>
-          <ul className="flex flex-wrap items-center mt-3 text-base font-medium text-white/70 sm:mt-0">
+          <ul className="flex flex-wrap items-center mt-3 text-base font-medium text-white/70 sm:mt-0 mr-10">
             <li>
               <a
                 href="/#navbar"

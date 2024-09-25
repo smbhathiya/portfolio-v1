@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import DownloadCVButton from "./DownloadCVButton"; 
+import DownloadCVButton from "./DownloadCVButton";
 
 const Menu = [
   { id: 1, name: "Home", link: "/#navbar" },
@@ -17,7 +17,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const opacity = Math.max(0.7, 1 - scrollTop / 200);
+      const opacity = Math.max(0.9, 1 - scrollTop / 200);
       setBgOpacity(opacity);
     };
 
@@ -29,10 +29,11 @@ const Navbar = () => {
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash) {
-        const offset = 100; // Offset for the navbar height
+        const offset = 110;
         const element = document.querySelector(hash);
         if (element) {
-          const topPosition = element.getBoundingClientRect().top + window.scrollY - offset;
+          const topPosition =
+            element.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({
             top: topPosition,
             behavior: "smooth",
@@ -48,18 +49,22 @@ const Navbar = () => {
   return (
     <section id="navbar">
       <div
-        className="bg-bgDark width-full z-50 mx-4 mr-4 rounded-bl-3xl rounded-br-3xl fixed top-0 left-0 right-0 transition-all duration-300 backdrop-blur-md"
+        className="bg-bgDark width-full z-50 md:mx-4 md:mr-4 mx-2 mr-2 rounded-bl-3xl rounded-br-3xl fixed top-0 left-0 right-0 transition-all duration-300 backdrop-blur-md"
         style={{ backgroundColor: `rgba(6, 6, 8, ${bgOpacity})` }}
       >
-        <div className="container p-3 py-4 relative">
+        <div className="container p-4 py-4 pt- pb-6 relative">
           <div className="flex justify-between items-center">
             {/* Logo section */}
             <div data-aos="fade-down" data-aos-once="true">
               <a
                 href="/"
-                className="text-2xl sm:text-4xl flex justify-center text-mainLight items-center gap-2 tracking-wider font-sans ml-6"
+                className="text-xl sm:text-4xl font-medium flex justify-center text-mainLight items-center gap-2 tracking-wider font-sans ml-6"
               >
-                <img src="/logo.png" alt="Logo" className="h-8 sm:h-10 w-auto" />
+                <img
+                  src="/logo.png"
+                  alt="Logo"
+                  className="h-10 sm:h-16 w-auto"
+                />
                 BHATHIYA
               </a>
             </div>
@@ -100,13 +105,18 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-              className={`md:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+              className={`md:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${
+                menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
               style={{
                 transitionDuration: "300ms",
                 zIndex: 40,
               }}
             >
-              <button onClick={() => setMenuOpen(false)} className="text-2xl absolute top-4 right-4">
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="text-2xl absolute top-4 right-4"
+              >
                 {/* <FaTimes /> */}
               </button>
               <div className="flex flex-col items-center space-y-4 mt-12">
@@ -126,7 +136,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="pt-[65px]" />
+      <div className="pt-[75px]" />
     </section>
   );
 };
