@@ -14,9 +14,14 @@ const contactData = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-brandDark text-white m-4 rounded-3xl p-4">
+    <section
+      id="contact"
+      className="bg-brandDark text-white md:m-4 m-2 rounded-3xl p-4"
+    >
       <div className="container mx-auto px-4 py-12 m-4 rounded-3xl p-4">
-        <h2 className="text-4xl text-mainLight text-center mb-8">Contact Me</h2>
+        <h2 className="md:text-4xl text-3xl font-bold text-mainLight text-center mb-10">
+          Contact Me
+        </h2>
         <div className="flex flex-col gap-8 items-center">
           <div className="flex flex-col ">
             <h3 className="text-lg text-center mb-4 ">
