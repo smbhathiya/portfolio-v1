@@ -12,8 +12,8 @@ const socialLinks = {
 
 const Home = () => {
   return (
-    <section id="home" className="pt-20">
-      <div className="min-h-[400px] sm:min-h-[600px] bg-brandDark flex justify-center items-center text-white sm:mt-10 m-4 rounded-3xl p-4">
+    <section id="home">
+      <div className="min-h-[400px] sm:min-h-[500px] bg-brandDark flex justify-center items-center text-white sm:mt-10 m-4 rounded-3xl p-4">
         <div className="container pb-6 sm:pb-1">
           <div className="grid grid-cols-1 sm:grid-cols-2">
             {/* Image Section */}
