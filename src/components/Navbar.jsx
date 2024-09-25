@@ -103,7 +103,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Screen*/}
             <div
               className={`md:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${
                 menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
