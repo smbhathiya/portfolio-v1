@@ -14,8 +14,8 @@ const contactData = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-brandDark text-white">
-      <div className="container mx-auto px-4 py-12">
+    <section id="contact" className="bg-brandDark text-white m-4 rounded-3xl p-4">
+      <div className="container mx-auto px-4 py-12 m-4 rounded-3xl p-4">
         <h2 className="text-4xl text-mainLight text-center mb-8">Contact Me</h2>
         <div className="flex flex-col gap-8 items-center">
           <div className="flex flex-col ">
@@ -83,7 +83,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <hr className="my-4 mx-auto w-[90%] border-t-2 border-main" />
     </section>
   );
 };

@@ -8,7 +8,7 @@ const Skills = () => {
   const databases = skillData.filter((skill) => skill.type === "database");
 
   return (
-    <section id="skills" className="bg-brandDark text-white">
+    <section id="skills" className="bg-brandDark text-white m-4 rounded-3xl p-4">
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-4xl text-mainLight text-center mb-8">
           Languages, Tools, and Technologies
@@ -116,7 +116,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <hr className="my-4 mx-auto w-[90%] border-t-2 border-main" />
     </section>
   );
 };

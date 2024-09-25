@@ -26,34 +26,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const offset = 40;
-        window.scrollTo({
-          top: document.querySelector(hash)?.offsetTop - offset,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden"; 
-    } else {
-      document.body.style.overflow = "unset"; 
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [menuOpen]);
-
   const handleMenuClick = (id) => {
     setActiveLink(id);
     setMenuOpen(false);
@@ -61,9 +33,9 @@ const Navbar = () => {
 
   return (
     <section id="navbar">
-      <div className="bg-bgDark2 width-full z-50 mx-4 mr-4 rounded-bl-3xl rounded-br-3xl fixed top-0 left-0 right-0 ">
+      <div className="bg-bgDark2 width-full z-50 mx-4 mr-4 rounded-bl-3xl rounded-br-3xl fixed top-0 left-0 right-0">
         <div
-          className="bg-brandDark text-white   mt-4  transition-all duration-300 backdrop-blur-md rounded-3xl"
+          className={`bg-brandDark text-white mt-4 transition-all duration-300 backdrop-blur-md rounded-3xl`}
           style={{ backgroundColor: `rgba(6, 6, 8, ${bgOpacity})` }}
         >
           <div className="container p-12 sm:p-6 py-4 md:p-12 md:py-4">
@@ -106,7 +78,7 @@ const Navbar = () => {
                     <li key={menu.id}>
                       <a
                         href={menu.link}
-                        className={`inline-block font-sans text-lg py-4 px-3 ${activeLink === menu.id ? 'text-white ' : 'text-white/70'} hover:text-white duration-200 `}
+                        className={`inline-block font-sans text-lg py-4 px-3 ${activeLink === menu.id ? 'text-white' : 'text-white/70'} hover:text-white duration-200`}
                         onClick={() => handleMenuClick(menu.id)}
                       >
                         {menu.name}
