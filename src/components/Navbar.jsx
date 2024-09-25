@@ -103,7 +103,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Screen*/}
             <div
               className={`md:hidden fixed top-0 left-0 w-full bg-brandDark text-white p-4 transition-opacity duration-300 ease-in-out ${
                 menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -116,9 +116,7 @@ const Navbar = () => {
               <button
                 onClick={() => setMenuOpen(false)}
                 className="text-2xl absolute top-4 right-4"
-              >
-                {/* <FaTimes /> */}
-              </button>
+              ></button>
               <div className="flex flex-col items-center space-y-4 mt-12">
                 {Menu.map((menu) => (
                   <a
