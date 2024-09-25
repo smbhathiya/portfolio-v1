@@ -116,9 +116,7 @@ const Navbar = () => {
               <button
                 onClick={() => setMenuOpen(false)}
                 className="text-2xl absolute top-4 right-4"
-              >
-                {/* <FaTimes /> */}
-              </button>
+              ></button>
               <div className="flex flex-col items-center space-y-4 mt-12">
                 {Menu.map((menu) => (
                   <a
