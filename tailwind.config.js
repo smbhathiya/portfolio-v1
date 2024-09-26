@@ -17,6 +17,7 @@ export default {
         brandDark: "#060608",
         bgDark2: "#13151c",
         bgDark3: "#2b2f44",
+        button: "#2c9999"
         
       },
       boxShadow: {

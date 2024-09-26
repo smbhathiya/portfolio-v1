@@ -13,25 +13,22 @@ const socialLinks = {
 const Home = () => {
   return (
     <section id="home">
-      <div
-        className=" bg-brandDark flex justify-center items-center text-white sm:mt-10 sm:m-4 m-2 mt-4  rounded-3xl p-4 pt-8 pb-8 bg-gradient-to-r from-brandDark via-bgDark2 to-brandDark
-       shadow-lg"
-      >
+      <div className="min-h-[400px] sm:min-h-[500px] bg-brandDark flex justify-center items-center text-white sm:mt-10 m-4 rounded-3xl p-4">
         <div className="container pb-6 sm:pb-1">
           <div className="grid grid-cols-1 sm:grid-cols-2">
             {/* Image Section */}
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="300"
-              className="min-h-[200px] flex justify-center items-center sm:order-2 order-1 mt-20 sm:mt-0"
-            >
-              <img
-                data-aos-once="true"
-                src={assets.profile_img}
-                alt="profile_img"
-                className="w-[200px] sm:w-[350px] mx-auto rounded-3xl hover:scale-110 duration-500 cursor-pointer"
-              />
-            </div>
+  <div
+    data-aos="zoom-in"
+    data-aos-duration="300"
+    className="min-h-[200px] flex justify-center items-center sm:order-2 order-1 mt-20 sm:mt-0"
+  >
+    <img
+      data-aos-once="true"
+      src={assets.profile_img}
+      alt="profile_img"
+      className="w-[200px] sm:w-[350px] mx-auto rounded-3xl hover:scale-110 duration-500 cursor-pointer"
+    />
+  </div>
             {/* Text Section */}
             <div className="flex flex-col justify-center gap-6 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1">
               <h1
@@ -39,10 +36,10 @@ const Home = () => {
                 data-aos-once="true"
                 className="text-2xl sm:text-3xl lg:text-3xl"
               >
-                <span className="bg-clip-text text-mainLight font-monospace text-xl md:text-2xl ">
+                <span className="bg-clip-text text-mainLight font-monospace text-2xl">
                   Hi, I'm Bhathiya Lakshan
                 </span>
-                <p className="md:text-lg text-sm sm:text-justify sm:p-0 p-1 font-monospace mt-2">
+                <p className="text-lg sm:text-justify sm:p-0 p-1 font-monospace mt-2">
                   I’m a software engineer with a Higher Diploma in Computing and
                   Software Engineering from ICBT Campus, offered by Cardiff
                   Metropolitan University. I focus on mobile and web app

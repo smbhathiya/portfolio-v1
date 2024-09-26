@@ -76,7 +76,7 @@ const Projects = () => {
                       href={project.release}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-green-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-green-600"
+                      className="bg-green-600 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-green-500"
                       title="View release"
                     >
                       Release
@@ -88,7 +88,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-main text-white px-4 py-2 rounded-lg hover:bg-mainDark"
+                    className="bg-main text-white px-4 py-2 rounded-lg hover:bg-button hover:shadow-lg"
                     title="View project on GitHub"
                   >
                     GitHub
