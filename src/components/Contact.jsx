@@ -6,7 +6,7 @@ import { FaFacebook, FaGithub } from "react-icons/fa6";
 
 const contactData = {
   email: "info@bhathiya.dev",
-  phone: "+94 76 894 1816",
+  phone: "+94 72 309 5865",
   linkedln: "https://www.linkedin.com/in/bhathiya-lakshan-91579722a/",
   facebook: "https://web.facebook.com/smbhathiya",
   github: "https://github.com/smbhathiya",
