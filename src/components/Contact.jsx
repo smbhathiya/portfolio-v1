@@ -5,7 +5,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { FaFacebook, FaGithub } from "react-icons/fa6";
 
 const contactData = {
-  email: "smbhathiya@gmail.com",
+  email: "info@bhathiya.dev",
   phone: "+94 76 894 1816",
   linkedln: "https://www.linkedin.com/in/bhathiya-lakshan-91579722a/",
   facebook: "https://web.facebook.com/smbhathiya",
